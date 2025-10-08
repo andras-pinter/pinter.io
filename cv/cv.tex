@@ -1,0 +1,252 @@
+\documentclass[a4papper,10pt]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ragged2e}
+\RequirePackage{hyperref}
+\RequirePackage{XCharter}
+\RequirePackage{graphicx}
+\RequirePackage{flowfram}
+\RequirePackage{url}
+\RequirePackage{tikz}
+\RequirePackage{enumitem}
+
+\setlist{noitemsep,nolistsep}
+\setlength{\columnsep}{\baselineskip}
+
+\newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
+\newlength{\LeftMainSep}
+\setlength{\LeftMainSep}{0.2\textwidth}
+\addtolength{\LeftMainSep}{1\columnsep}
+
+\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+
+\begin{staticcontents}{1}
+\hfill
+\tikz{\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0](0,0) -- (0,\textheight);}
+\hfill\mbox{}
+\end{staticcontents}
+
+\addtolength{\LeftMainSep}{1.5pt}
+\addtolength{\LeftMainSep}{1\columnsep}
+\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\CVHeading}[1]{{\Huge\bfseries\color{RoyalBlue} #1} \par\vspace{.6\baselineskip}}
+\newcommand{\CVSubheading}[1]{{\Large\bfseries #1} \bigbreak}
+\newcommand{\Sep}{\vspace{0.9em}}
+\newcommand{\SmallSep}{\vspace{0.5em}}
+\newcommand{\CVSection}[1]{{\Large\textbf{#1}}\par\SmallSep}
+\newcommand{\CVItem}[2]{\textbf{\color{RoyalBlue} #1}\par#2\SmallSep}
+\newcommand{\bluebullet}{\textcolor{RoyalBlue}{$\circ$}~~}
+\newcommand{\nextpage}{\clearpage\framebreak\framebreak}
+
+\newcommand{\Aboutme}[2]{
+    \textbf{\color{RoyalBlue} #1}~~#2\par
+}
+\newcommand{\userinformation}{
+    \begin{flushright}
+      \begin{tikzpicture}[remember picture,overlay]
+        \clip ($(current page text area.north east)!0.06!(current page text area.south east)!0.12!(current page text area.north west)$) circle (2cm) node {\includegraphics[width=0.2\linewidth]{assets/profile-image.jpg}};
+      \end{tikzpicture}
+      \includegraphics[width=0.6\columnwidth]{assets/profile-image.jpg}\\[\baselineskip]
+      \small
+      Andras PINTER\\
+      andras@pinter.io\\
+      \Sep
+      \Sep
+      \textbf{Programming skills} \\
+      \Sep
+      Rust\\
+      Python\\
+      TypeScript\\
+      C\#\\
+      \Sep
+      \Sep
+      \textbf{Techonlogies} \\
+      \Sep
+      Helm, Bicep, Bash\\
+      Docker, Kubernetes\\
+      Azure Cloud, DevOps\\
+      REST, gRPC, Protobuf, eBPF\\
+      ElasticSearch, Azure Search\\
+      \Sep
+      \Sep
+      \textbf{Other skills} \\
+      \Sep
+      git\\
+      Azure DevOps\\
+      Linux, MacOS\\
+      \Sep
+      \Sep
+      \textbf{Language skills} \\
+      \Sep
+      Hungarian\\
+      English
+    \end{flushright}
+}
+
+\newcommand{\intoduction}{
+  \begin{flushleft}
+    \CVHeading{Andras Pinter}
+   	\CVSubheading{Principal Software Engineer | Architect}
+   	\Aboutme{ABOUT ME}{
+      \justifying
+ 	    I am a passionate Software Developer who is eager to learn new technologies and face new challenges.
+      I have solid work experience in software development, testing, and development processes. I am a quick
+      learner and I can catch up rapidly. I have a great passion for clean code and creating something new,
+      even from scratch. I am not afraid to dive into the unknown and start creating to help achieve something
+      great.\\
+      \textbf{\color{RoyalBlue} MOTTO}~~\textbf{\textit{Nothin is impossible}}
+   	}
+  \end{flushleft}
+}
+
+\newcommand{\workexperience}{
+  \begin{flushleft}
+    \CVSection{Work Experience}
+    \workexperienceitem{Principal Software Engineer}{One Identity}{April 2023}{present}{
+      I was the lead developer and architect for a secure-gateway (VPN-alternative) technology.\\
+      I was the lead developer and architect for a web-browser-based RDP and SSH client technology.\\
+      I was the lead developer and architect for PAM monitoring and auditor services for RDP and SSH access.\\
+      I was part of the Cloud Software Architect team, designing and creating a Cloud-based, multi-tenant PAM SaaS product.\\
+      \Sep
+      \underline{Key objectives}:
+      \begin{itemize}
+        \item{REST, gRPC}
+        \item{TypeScript, Angular}
+        \item{C\#, ASP.Net, MassTransit}
+        \item{Azure DevOps, Helm, Bicep}
+        \item{Azure Cloud technologies and managed services}
+        \item{Rust, Tokio-runtime, Actix actor-system, WebAssemly}
+        \item{Fast, secure, and reliable multi-threaded, asynchronous services}
+      \end{itemize}
+    }
+    \workexperienceitem{Software Developer Staff Engineer}{One Identity}{April 2022}{April 2023}{
+      I was the technical product owner of a Remote Access Cloud product.\\
+      I was part of the Cloud Software Architect team to design a new Cloud-based, single-tenant, managed SaaS security product.\\
+      \Sep
+      \underline{Key objectives}:
+      \begin{itemize}
+        \item{C\#, ASP.Net}
+        \item{Rust, Tokio-runtime}
+        \item{Azure Cloud technologies}
+        \item{Raw SSH protocol and Web Technologies}
+        \item{Fast, secure, and reliable multi-threaded, asynchronous services}
+      \end{itemize}
+    }
+    \workexperienceitem{Software Developer Staff Engineer}{One Identity}{August 2020}{April 2022}{
+      I was the lead developer for a next-generation, HTTP monitoring proxy.\\
+      \Sep
+      \underline{Key objectives}:
+      \begin{itemize}
+        \item{Rust, Tokio-runtime, Hyper}
+        \item{Fast, secure, and reliable multi-threaded, asynchronous application}
+      \end{itemize}
+    }
+    \workexperienceitem{Software Developer Engineer}{Balabit/One Identity}{April 2017}{August 2020}{
+      I was a first-class developer for an Auditor Portal and Search backend, a Reporting generation tool, and a configuration management backend.\\
+      I was a maintainer and developer for an in-house REST API Framework (Python) to configure the product and search session audit information.\\
+      \Sep
+      \underline{Key objectives}:
+      \begin{itemize}
+        \item{Python, PHP, Scala, Bash}
+        \item{Networking technologies and security}
+        \item{Linux systems and service management}
+        \item{ElasticSearch, PostgresSQL, AMQP/RabbitMQ}
+      \end{itemize}
+    }
+    \nextpage
+    \workexperienceitem{Software Test Development Engineer}{Continental Engineering Services}{October 2014}{April 2017}{
+      I created an automation test framework for automotive ECUs Hardware in the loop (HIL) testing in Python to
+      ease and speed up creating and executing Test Scenarios.\\
+      \Sep
+      \underline{Key objectives}:
+      \begin{itemize}
+        \item{dSpace HIL Testing}
+        \item{CAN \& Felxray networking}
+        \item{Python, Numpy, MatLab Simulink}
+      \end{itemize}
+    }
+  \end{flushleft}
+}
+
+\newcommand{\workexperienceitem}[5]{
+  \CVItem{\normalsize #1\\\small\textit{#2}}{
+    \tiny\textit{#3 - #4}
+    \small\\#5
+  }
+}
+
+\newcommand{\education}{
+  \begin{flushleft}
+    \CVSection{Education}
+    \educationitem{BSc degree in Computer Science and Engineering}{University of Pannonia, Veszprém, Hungary}{2014}
+    \educationitem{Certificated Software Developer}{Energetikai Szakközépiskola és Kollégium, Paks, Hungary}{2009}
+    \educationitem{Specialization in Computer Science}{Energetikai Szakközépiskola és Kollégium, Paks, Hungary}{2008}
+  \end{flushleft}
+}
+
+\newcommand{\educationitem}[3]{
+  \CVItem{#1}{
+    \small #2\\
+    \small\textit{Graduated in #3}\\
+    \normalsize
+  }
+}
+
+\newcommand{\softskills}{
+  \begin{flushleft}
+    \CVSection{Soft skills}
+    \begin{tabular}{p{1\textwidth}}
+    \bluebullet Good communication skills\\
+    \bluebullet Creative, fast, and overviewing thinking\\
+    \bluebullet Effective and rapid problem solving\\
+    \bluebullet Ability to learn and pick up new technologies quickly\\
+    \bluebullet Experience in multicultural, multi-time-zoned project teamwork\\
+    \bluebullet Cooperative, ability to work in a team and individually as well\\
+    \bluebullet Good organizing skills, ability to lead people and projects\\
+    \bluebullet Flexibility to travel
+    \end{tabular}
+  \end{flushleft}
+}
+
+\newcommand{\notableprojects}{
+  \begin{flushleft}
+    \CVSection{Notable Projects}
+    \project{SecureGateway}{
+      is a VPN alternative that eliminates the VPN requirement for our Cloud services to make TCP/UDP
+      calls to our customers' sealed network. It is a server-client architecture, which could be running
+      in a multi-tenant or single-tenant SaaS environment. SecureGateway is a low-level (L4) network
+      shaper \& router, built in fully asynchronous Rust, using gRPC tunnels. The single-tenant version
+      is extended by eBPF kernel modules, which can reshape network packets before the Userspace.
+    }
+    \project{WebClients}{
+      are Cloud-based SSH \& RDP clients. Partially running in our Cloud infrastructure, and the rendering
+      part is running in the User's web browser. SSH terminal buffer updates are rendered by JavaScript code,
+      and RDP Graphical PDUs are rendered by a Web Assembly module.
+    }
+  \end{flushleft}
+}
+
+\newcommand{\project}[2]{
+  \textbf{\color{RoyalBlue} #1}~~#2
+}
+
+\begin{document}
+  \userinformation
+	\framebreak
+	\intoduction
+	\Sep
+	\workexperience
+	\Sep
+	\notableprojects
+	\Sep
+	\education
+	\Sep
+	\softskills
+\end{document}

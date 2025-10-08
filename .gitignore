@@ -42,3 +42,8 @@ testem.log
 Thumbs.db
 .vercel
 .angular
+
+# Latex outfiles
+/cv/*
+!/cv/*.tex
+!/cv/assets
