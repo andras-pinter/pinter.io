@@ -1,9 +1,11 @@
 \documentclass[a4papper,10pt]{memoir}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{ragged2e}
+
 \RequirePackage{hyperref}
 \RequirePackage{XCharter}
 \RequirePackage{graphicx}
@@ -48,11 +50,9 @@
 \newcommand{\Aboutme}[2]{
     \textbf{\color{RoyalBlue} #1}~~#2\par
 }
+
 \newcommand{\userinformation}{
     \begin{flushright}
-      \begin{tikzpicture}[remember picture,overlay]
-        \clip ($(current page text area.north east)!0.06!(current page text area.south east)!0.12!(current page text area.north west)$) circle (2cm) node {\includegraphics[width=0.2\linewidth]{assets/profile-image.jpg}};
-      \end{tikzpicture}
       \includegraphics[width=0.6\columnwidth]{assets/profile-image.jpg}\\[\baselineskip]
       \small
       Andras PINTER\\
