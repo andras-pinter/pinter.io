@@ -44,6 +44,5 @@ Thumbs.db
 .angular
 
 # Latex outfiles
-/cv/*
-!/cv/*.tex
-!/cv/assets
+cv.*
+!/cv/cv.tex
