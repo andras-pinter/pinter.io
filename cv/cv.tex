@@ -1,10 +1,11 @@
-\documentclass[a4papper,10pt]{memoir}
+\documentclass[10pt]{memoir}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[top=1cm,left=1cm,right=1cm,bottom=1cm]{geometry}
+\usepackage[margin=1cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{ragged2e}
+\usepackage[none]{hyphenat}
 
 \RequirePackage{hyperref}
 \RequirePackage{XCharter}
@@ -41,7 +42,8 @@
 \newcommand{\CVHeading}[1]{{\Huge\bfseries\color{RoyalBlue} #1} \par\vspace{.6\baselineskip}}
 \newcommand{\CVSubheading}[1]{{\Large\bfseries #1} \bigbreak}
 \newcommand{\Sep}{\vspace{0.9em}}
-\newcommand{\SmallSep}{\vspace{0.5em}}
+\newcommand{\BigSep}{\vspace{1.9em}}
+\newcommand{\SmallSep}{\vspace{0.4em}}
 \newcommand{\CVSection}[1]{{\Large\textbf{#1}}\par\SmallSep}
 \newcommand{\CVItem}[2]{\textbf{\color{RoyalBlue} #1}\par#2\SmallSep}
 \newcommand{\bluebullet}{\textcolor{RoyalBlue}{$\circ$}~~}
@@ -57,34 +59,42 @@
       \small
       Andras PINTER\\
       andras@pinter.io\\
-      \Sep
-      \Sep
-      \textbf{Programming skills} \\
-      \Sep
+      \BigSep
+      \BigSep
+      \textbf{\Large Skills \normalsize}\\
+      \BigSep
+      \textbf{Programming}\\
       Rust\\
       Python\\
       TypeScript\\
       C\#\\
-      \Sep
-      \Sep
-      \textbf{Techonlogies} \\
-      \Sep
-      Helm, Bicep, Bash\\
-      Docker, Kubernetes\\
-      Azure Cloud, DevOps\\
-      REST, gRPC, Protobuf, eBPF\\
-      ElasticSearch, Azure Search\\
-      \Sep
-      \Sep
-      \textbf{Other skills} \\
-      \Sep
+      \BigSep
+      \textbf{Cloud \& DevOps}\\
+      Helm\\
+      Bicep\\
+      Docker\\
+      Kubernetes\\
+      Azure Cloud\\
+      \BigSep
+      \textbf{Networking \& Protocols}\\
+      REST\\
+      gRPC\\
+      Protobuf\\
+      TCP/UDP\\
+      \BigSep
+      \textbf{Data Storage}\\
+      CosmosDB\\
+      PostgreSQL\\
+      Azure Search\\
+      ElasticSearch\\
+      \BigSep
+      \textbf{Other} \\
       git\\
-      Azure DevOps\\
+      eBPF\\
+      Bash\\
       Linux, MacOS\\
-      \Sep
-      \Sep
+      \BigSep
       \textbf{Language skills} \\
-      \Sep
       Hungarian\\
       English
     \end{flushright}
@@ -96,12 +106,11 @@
    	\CVSubheading{Principal Software Engineer | Architect}
    	\Aboutme{ABOUT ME}{
       \justifying
- 	    I am a passionate Software Developer who is eager to learn new technologies and face new challenges.
-      I have solid work experience in software development, testing, and development processes. I am a quick
-      learner and I can catch up rapidly. I have a great passion for clean code and creating something new,
-      even from scratch. I am not afraid to dive into the unknown and start creating to help achieve something
-      great.\\
-      \textbf{\color{RoyalBlue} MOTTO}~~\textbf{\textit{Nothin is impossible}}
+ 	    Passionate Software Developer building secure, high-performance distributed systems in Rust and C\#. Strong
+      focus on clean architecture, scalability, and developer productivity. Eager to learn new technologies and
+      face new challenges. Quick learner with a passion for clean code and building innovative systems from scratch.
+      Not afraid to dive into the unknown and start creating to help achieve something great.\\
+      \textbf{\color{RoyalBlue} MOTTO}~~\textbf{\textit{Nothing is impossible}}
    	}
   \end{flushleft}
 }
@@ -109,28 +118,37 @@
 \newcommand{\workexperience}{
   \begin{flushleft}
     \CVSection{Work Experience}
+    \workexperienceitem{Software Architect}{One Identity}{February 2025}{present}{
+      Part of the company-wide Architecture Team, designing the next-generation Cloud solution and Platform for PAM, Identity,
+      and Governance use-cases.\\
+      Working with multiple Development Teams to help them understand requirements, designs, and guide implementation.\\
+    }
+    \Sep
     \workexperienceitem{Principal Software Engineer}{One Identity}{April 2023}{present}{
-      I was the lead developer and architect for a secure-gateway (VPN-alternative) technology.\\
-      I was the lead developer and architect for a web-browser-based RDP and SSH client technology.\\
-      I was the lead developer and architect for PAM monitoring and auditor services for RDP and SSH access.\\
-      I was part of the Cloud Software Architect team, designing and creating a Cloud-based, multi-tenant PAM SaaS product.\\
+      Lead developer and architect for a secure-gateway (VPN-alternative) technology.\\
+      Lead developer and architect for a web-browser-based RDP and SSH client technology.\\
+      Lead developer and architect for PAM monitoring and auditor services for RDP and SSH secure, remote access.\\
+      Member of the Cloud Software Architect team, designing and creating a Cloud-based, multi-tenant PAM SaaS product.\\
       \Sep
       \underline{Key objectives}:
+      \SmallSep
       \begin{itemize}
         \item{REST, gRPC}
         \item{TypeScript, Angular}
         \item{C\#, ASP.Net, MassTransit}
         \item{Azure DevOps, Helm, Bicep}
         \item{Azure Cloud technologies and managed services}
-        \item{Rust, Tokio-runtime, Actix actor-system, WebAssemly}
+        \item{Rust, Tokio-runtime, Actix actor-system, WebAssembly}
         \item{Fast, secure, and reliable multi-threaded, asynchronous services}
       \end{itemize}
     }
+    \Sep
     \workexperienceitem{Software Developer Staff Engineer}{One Identity}{April 2022}{April 2023}{
-      I was the technical product owner of a Remote Access Cloud product.\\
-      I was part of the Cloud Software Architect team to design a new Cloud-based, single-tenant, managed SaaS security product.\\
+      Technical product owner of a Remote Access Cloud product.\\
+      Member of the Cloud Software Architect team to design a new Cloud-based, single-tenant, managed SaaS security product.\\
       \Sep
       \underline{Key objectives}:
+      \SmallSep
       \begin{itemize}
         \item{C\#, ASP.Net}
         \item{Rust, Tokio-runtime}
@@ -139,30 +157,34 @@
         \item{Fast, secure, and reliable multi-threaded, asynchronous services}
       \end{itemize}
     }
+    \Sep
     \workexperienceitem{Software Developer Staff Engineer}{One Identity}{August 2020}{April 2022}{
-      I was the lead developer for a next-generation, HTTP monitoring proxy.\\
+      Lead developer for a next-generation, HTTP monitoring proxy.\\
       \Sep
       \underline{Key objectives}:
+      \SmallSep
       \begin{itemize}
         \item{Rust, Tokio-runtime, Hyper}
         \item{Fast, secure, and reliable multi-threaded, asynchronous application}
       \end{itemize}
     }
+    \nextpage
     \workexperienceitem{Software Developer Engineer}{Balabit/One Identity}{April 2017}{August 2020}{
-      I was a first-class developer for an Auditor Portal and Search backend, a Reporting generation tool, and a configuration management backend.\\
-      I was a maintainer and developer for an in-house REST API Framework (Python) to configure the product and search session audit information.\\
+      First-class developer for an Auditor Portal and Search backend, a Reporting generation tool, and a configuration management backend.\\
+      Maintainer and developer for an in-house REST API Framework (Python) to configure the product and search session audit information.\\
       \Sep
       \underline{Key objectives}:
+      \SmallSep
       \begin{itemize}
         \item{Python, PHP, Scala, Bash}
         \item{Networking technologies and security}
         \item{Linux systems and service management}
-        \item{ElasticSearch, PostgresSQL, AMQP/RabbitMQ}
+        \item{ElasticSearch, PostgreSQL, AMQP/RabbitMQ}
       \end{itemize}
     }
-    \nextpage
+    \Sep
     \workexperienceitem{Software Test Development Engineer}{Continental Engineering Services}{October 2014}{April 2017}{
-      I created an automation test framework for automotive ECUs Hardware in the loop (HIL) testing in Python to
+      Created an automation test framework for automotive ECUs Hardware in the loop (HIL) testing in Python to
       ease and speed up creating and executing Test Scenarios.\\
       \Sep
       \underline{Key objectives}:
@@ -177,7 +199,7 @@
 
 \newcommand{\workexperienceitem}[5]{
   \CVItem{\normalsize #1\\\small\textit{#2}}{
-    \tiny\textit{#3 - #4}
+    \small\textit{#3 - #4}
     \small\\#5
   }
 }
@@ -215,9 +237,9 @@
   \end{flushleft}
 }
 
-\newcommand{\notableprojects}{
+\newcommand{\keyprojects}{
   \begin{flushleft}
-    \CVSection{Notable Projects}
+    \CVSection{Key Projects}
     \project{SecureGateway}{
       is a VPN alternative that eliminates the VPN requirement for our Cloud services to make TCP/UDP
       calls to our customers' sealed network. It is a server-client architecture, which could be running
@@ -225,10 +247,11 @@
       shaper \& router, built in fully asynchronous Rust, using gRPC tunnels. The single-tenant version
       is extended by eBPF kernel modules, which can reshape network packets before the Userspace.
     }
+    \Sep\\
     \project{WebClients}{
       are Cloud-based SSH \& RDP clients. Partially running in our Cloud infrastructure, and the rendering
       part is running in the User's web browser. SSH terminal buffer updates are rendered by JavaScript code,
-      and RDP Graphical PDUs are rendered by a Web Assembly module.
+      and RDP Graphical PDUs are rendered by a WebAssembly module.
     }
   \end{flushleft}
 }
@@ -243,10 +266,7 @@
 	\intoduction
 	\Sep
 	\workexperience
-	\Sep
-	\notableprojects
-	\Sep
+	\keyprojects
 	\education
-	\Sep
 	\softskills
 \end{document}
