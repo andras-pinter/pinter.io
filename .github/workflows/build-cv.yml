@@ -1,5 +1,5 @@
-name: Build CV
-run-name: Generating and build CV
+name: Build and Release Resume
+run-name: Release Resume
 on:
   push:
     branches:
@@ -11,8 +11,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: xu-cheng/latex-action@v4
+        name: Build Resume
         with:
           root_file: cv.tex
           working_directory: cv
           pre_compile: "tlmgr update --self && tlmgr update --all"
           texlive_version: 2024
+      - name: Prepare Resume
+        run: |
+          mv cv/cv.pdf cv/AndrasPinter.pdf
+          mv cv/cv.tex cv/AndrasPinter.tex
+          tag_name=$(cat VERSION)
+          git tag v$tag_name -f
+          git push origin v$tag_name -f
+          echo "TAG=v${tag_name}" >> $GITHUB_ENV
+      - name: Release Resume
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cv/AndrasPinter.pdf
+            cv/AndrasPinter.tex
+          tag_name: "${{ env.TAG }}"
