@@ -14,3 +14,4 @@ jobs:
           root_file: cv.tex
           working_directory: cv
           pre_compile: "tlmgr update --self && tlmgr update --all"
+          texlive_version: 2024
