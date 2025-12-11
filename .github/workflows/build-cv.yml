@@ -22,7 +22,7 @@ jobs:
         run: |
           mv cv/cv.pdf cv/AndrasPinter.pdf
           mv cv/cv.tex cv/AndrasPinter.tex
-          tag_name=$(cat VERSION)
+          tag_name=$(jq --raw-output '.version' pinter.io/package.json)
           git tag v$tag_name -f
           git push origin v$tag_name -f
           echo "TAG=v${tag_name}" >> $GITHUB_ENV
