@@ -33,7 +33,7 @@
 		<div class="skills-table">
 			{#each skillGroups as group (group.name)}
 				<div class="skill-row">
-					<span class="category">{group.name}</span>
+					<h3 class="category">{group.name}</h3>
 					<div class="skill-tags">
 						{#each group.skills as skill (skill)}
 							<span class="tag">{skill}</span>
@@ -97,6 +97,7 @@
 		color: var(--accent);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
+		margin: 0;
 	}
 
 	.skill-tags {
