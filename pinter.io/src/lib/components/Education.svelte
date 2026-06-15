@@ -85,7 +85,7 @@
 	}
 
 	.edu-year {
-		font-family: 'JetBrains Mono', monospace;
+		font-family: 'JetBrains Mono Variable', monospace;
 		font-size: 0.875rem;
 		color: var(--accent);
 		font-weight: 500;

@@ -95,18 +95,18 @@
 
 	blockquote {
 		margin-top: 1rem;
-		padding: 1.5rem 2rem;
+		padding: 0.875rem 1.25rem;
 		background: var(--accent-bg);
-		border-left: 3px solid var(--accent);
-		border-radius: 0 0.5rem 0.5rem 0;
+		border-left: 2px solid var(--accent);
+		border-radius: 0 0.375rem 0.375rem 0;
 		font-style: italic;
-		font-size: 1.25rem;
-		color: var(--text);
+		font-size: 0.9375rem;
+		color: var(--text-muted);
 		font-weight: 500;
 	}
 
 	.quote-mark {
 		color: var(--accent);
-		font-size: 1.5rem;
+		font-size: 1.125rem;
 	}
 </style>

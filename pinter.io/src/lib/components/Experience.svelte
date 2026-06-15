@@ -223,7 +223,7 @@
 	.period {
 		font-size: 0.75rem;
 		color: var(--text-dim);
-		font-family: 'JetBrains Mono', monospace;
+		font-family: 'JetBrains Mono Variable', monospace;
 		white-space: nowrap;
 	}
 
@@ -247,7 +247,7 @@
 		border-radius: 0.375rem;
 		font-size: 0.75rem;
 		color: var(--accent-light);
-		font-family: 'JetBrains Mono', monospace;
+		font-family: 'JetBrains Mono Variable', monospace;
 	}
 
 	@media (max-width: 640px) {
