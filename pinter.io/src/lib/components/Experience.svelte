@@ -15,7 +15,7 @@
 			from: 'February 2025',
 			to: 'present',
 			description:
-				'Part of the company-wide Architecture Team, designing the next-generation Cloud solution and Platform for PAM, Identity, and Governance use-cases. Working with multiple Development Teams to help them understand requirements, designs, and guide implementation.'
+				'Part of the company-wide Architecture Team, designing the next-generation Cloud platform for PAM, IGA, and Governance. Leading architectural decisions across 5–6 teams (20+ engineers), guiding requirements, designs, and implementation.'
 		},
 		{
 			title: 'Principal Software Engineer',

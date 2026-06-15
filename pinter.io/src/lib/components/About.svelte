@@ -3,15 +3,21 @@
 		<h2>About Me</h2>
 		<div class="about-content">
 			<p>
-				Passionate Software Developer building secure, high-performance distributed systems in
+				Building secure, high-performance distributed systems in
 				<strong>Rust</strong> and <strong>C#</strong>. Strong focus on clean architecture,
-				scalability, and developer productivity.
+				scalability, and developer productivity. Not afraid to dive into the unknown and build
+				innovative systems from scratch.
 			</p>
-			<p>
-				Eager to learn new technologies and face new challenges. Quick learner with a passion for
-				clean code and building innovative systems from scratch. Not afraid to dive into the unknown
-				and start creating to help achieve something great.
-			</p>
+			<div class="focus-areas">
+				<h3>Current Focus</h3>
+				<div class="areas">
+					<span class="area">PAM</span>
+					<span class="area">IGA</span>
+					<span class="area">Cloud Architecture</span>
+					<span class="area">Distributed Systems</span>
+					<span class="area">Platform Engineering</span>
+				</div>
+			</div>
 			<blockquote>
 				<span class="quote-mark">"</span>Nothing is impossible<span class="quote-mark">"</span>
 			</blockquote>
@@ -60,6 +66,31 @@
 
 	p strong {
 		color: var(--text);
+	}
+
+	.focus-areas h3 {
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--accent);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75rem;
+	}
+
+	.areas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.area {
+		padding: 0.375rem 0.875rem;
+		background: var(--accent-bg);
+		border: 1px solid var(--accent-border);
+		border-radius: 2rem;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: var(--accent);
 	}
 
 	blockquote {

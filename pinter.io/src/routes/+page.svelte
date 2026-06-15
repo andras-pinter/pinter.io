@@ -10,8 +10,8 @@
 
 <Hero />
 <About />
+<Projects />
 <Skills />
 <Experience />
-<Projects />
 <Education />
 <Footer />
