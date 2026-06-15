@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'cv/**'
+      - '.github/workflows/build-cv.yml'
   workflow_dispatch:
 jobs:
   build-cv:
@@ -16,7 +19,7 @@ jobs:
           root_file: cv.tex
           working_directory: cv
           pre_compile: "tlmgr update --self && tlmgr update --all"
-          texlive_version: 2024
+          texlive_version: 2025
       - name: Prepare Resume
         if: github.ref == 'refs/heads/master'
         run: |
