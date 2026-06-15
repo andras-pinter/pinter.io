@@ -48,6 +48,44 @@
 				</svg>
 			</a>
 		</div>
+		<div class="cv-download">
+			<a
+				href="https://github.com/andras-pinter/pinter.io/releases/latest/download/AndrasPinter.pdf"
+				class="dl-btn"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					width="16"
+					height="16"
+				>
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+				</svg>
+				CV (PDF)
+			</a>
+			<a
+				href="https://github.com/andras-pinter/pinter.io/releases/latest/download/AndrasPinter.tex"
+				class="dl-btn dl-secondary"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<svg
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					width="16"
+					height="16"
+				>
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+				</svg>
+				CV (LaTeX)
+			</a>
+		</div>
 		<div class="scroll-hint">
 			<span>scroll</span>
 			<svg
@@ -78,8 +116,8 @@
 		position: absolute;
 		inset: 0;
 		background:
-			radial-gradient(ellipse at 50% 0%, rgba(96, 165, 250, 0.08) 0%, transparent 60%),
-			radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+			radial-gradient(ellipse at 50% 0%, var(--hero-glow-1) 0%, transparent 60%),
+			radial-gradient(ellipse at 80% 80%, var(--hero-glow-2) 0%, transparent 50%);
 	}
 
 	.hero-content {
@@ -105,8 +143,8 @@
 		margin: 0 auto 2rem;
 		border-radius: 50%;
 		overflow: hidden;
-		border: 3px solid rgba(96, 165, 250, 0.3);
-		box-shadow: 0 0 40px rgba(96, 165, 250, 0.15);
+		border: 3px solid var(--accent-border);
+		box-shadow: 0 0 40px var(--accent-bg);
 	}
 
 	.avatar img {
@@ -121,7 +159,7 @@
 		letter-spacing: -0.03em;
 		line-height: 1.1;
 		margin-bottom: 0.5rem;
-		background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+		background: var(--gradient-heading);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -129,20 +167,20 @@
 
 	.title {
 		font-size: 1.125rem;
-		color: #60a5fa;
+		color: var(--accent);
 		font-weight: 500;
 		margin-bottom: 1rem;
 	}
 
 	.tagline {
 		font-size: 1rem;
-		color: #71717a;
+		color: var(--text-dim);
 		max-width: 500px;
 		margin: 0 auto;
 	}
 
 	.highlight {
-		color: #e4e4e7;
+		color: var(--text);
 		font-weight: 600;
 	}
 
@@ -160,17 +198,56 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		color: #a1a1aa;
+		background: var(--surface-hover);
+		border: 1px solid var(--border);
+		color: var(--text-muted);
 		transition: all 0.3s ease;
 	}
 
 	.socials a:hover {
-		background: rgba(96, 165, 250, 0.1);
-		border-color: rgba(96, 165, 250, 0.3);
-		color: #60a5fa;
+		background: var(--accent-bg);
+		border-color: var(--accent-border);
+		color: var(--accent);
 		transform: translateY(-2px);
+	}
+
+	.cv-download {
+		display: flex;
+		gap: 0.75rem;
+		justify-content: center;
+		margin-top: 1.5rem;
+	}
+
+	.dl-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.625rem 1.25rem;
+		border-radius: 0.5rem;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		background: var(--accent);
+		color: #ffffff;
+		border: 1px solid transparent;
+		transition: all 0.2s ease;
+	}
+
+	.dl-btn:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
+		color: #ffffff;
+	}
+
+	.dl-btn.dl-secondary {
+		background: transparent;
+		border: 1px solid var(--border);
+		color: var(--text-muted);
+	}
+
+	.dl-btn.dl-secondary:hover {
+		border-color: var(--accent-border);
+		color: var(--accent);
+		background: var(--accent-bg);
 	}
 
 	.scroll-hint {
@@ -182,7 +259,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 0.25rem;
-		color: #52525b;
+		color: var(--text-dim);
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;

@@ -64,7 +64,7 @@
 		font-size: 2rem;
 		font-weight: 700;
 		margin-bottom: 3rem;
-		color: #ffffff;
+		color: var(--text);
 		position: relative;
 		display: inline-block;
 	}
@@ -76,7 +76,7 @@
 		left: 0;
 		width: 3rem;
 		height: 3px;
-		background: #60a5fa;
+		background: var(--accent);
 		border-radius: 2px;
 	}
 
@@ -88,17 +88,17 @@
 
 	.project-card {
 		padding: 2rem;
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.06);
+		background: var(--surface);
+		border: 1px solid var(--border);
 		border-radius: 1rem;
 		transition: all 0.3s ease;
 	}
 
 	.project-card:hover {
-		background: rgba(96, 165, 250, 0.03);
-		border-color: rgba(96, 165, 250, 0.15);
+		background: var(--card-hover-bg);
+		border-color: var(--card-hover-border);
 		transform: translateY(-4px);
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 20px 40px var(--shadow);
 	}
 
 	.card-header {
@@ -106,28 +106,28 @@
 		align-items: center;
 		gap: 0.75rem;
 		margin-bottom: 1rem;
-		color: #60a5fa;
+		color: var(--accent);
 	}
 
 	h3 {
 		font-size: 1.25rem;
 		font-weight: 700;
-		color: #ffffff;
+		color: var(--text);
 	}
 
 	.description {
 		font-size: 0.9375rem;
-		color: #a1a1aa;
+		color: var(--text-muted);
 		line-height: 1.7;
 		margin-bottom: 1rem;
 	}
 
 	.highlight {
 		font-size: 0.875rem;
-		color: #71717a;
+		color: var(--text-dim);
 		line-height: 1.6;
 		padding: 0.75rem 1rem;
-		background: rgba(96, 165, 250, 0.05);
+		background: var(--accent-bg);
 		border-radius: 0.5rem;
 		margin-bottom: 1.25rem;
 	}
@@ -140,11 +140,11 @@
 
 	.tech {
 		padding: 0.25rem 0.625rem;
-		background: rgba(139, 92, 246, 0.1);
-		border: 1px solid rgba(139, 92, 246, 0.2);
+		background: var(--purple);
+		border: 1px solid var(--purple-border);
 		border-radius: 0.375rem;
 		font-size: 0.75rem;
-		color: #c4b5fd;
+		color: var(--purple-text);
 		font-family: 'JetBrains Mono', monospace;
 	}
 

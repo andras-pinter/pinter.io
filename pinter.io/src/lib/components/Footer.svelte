@@ -9,17 +9,17 @@
 	footer {
 		padding: 3rem 2rem;
 		text-align: center;
-		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		border-top: 1px solid var(--border);
 	}
 
 	p {
-		color: #71717a;
+		color: var(--text-dim);
 		font-size: 0.875rem;
 	}
 
 	.sub {
 		font-size: 0.75rem;
 		margin-top: 0.25rem;
-		color: #3f3f46;
+		color: var(--text-dim);
 	}
 </style>

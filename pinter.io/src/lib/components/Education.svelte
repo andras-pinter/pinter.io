@@ -46,7 +46,7 @@
 		font-size: 2rem;
 		font-weight: 700;
 		margin-bottom: 3rem;
-		color: #ffffff;
+		color: var(--text);
 		position: relative;
 		display: inline-block;
 	}
@@ -58,7 +58,7 @@
 		left: 0;
 		width: 3rem;
 		height: 3px;
-		background: #60a5fa;
+		background: var(--accent);
 		border-radius: 2px;
 	}
 
@@ -73,21 +73,21 @@
 		gap: 2rem;
 		align-items: flex-start;
 		padding: 1.5rem;
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.06);
+		background: var(--surface);
+		border: 1px solid var(--border);
 		border-radius: 1rem;
 		transition: all 0.3s ease;
 	}
 
 	.edu-item:hover {
-		background: rgba(96, 165, 250, 0.03);
-		border-color: rgba(96, 165, 250, 0.15);
+		background: var(--card-hover-bg);
+		border-color: var(--card-hover-border);
 	}
 
 	.edu-year {
 		font-family: 'JetBrains Mono', monospace;
 		font-size: 0.875rem;
-		color: #60a5fa;
+		color: var(--accent);
 		font-weight: 500;
 		white-space: nowrap;
 		padding-top: 0.125rem;
@@ -96,13 +96,13 @@
 	h3 {
 		font-size: 1rem;
 		font-weight: 600;
-		color: #ffffff;
+		color: var(--text);
 		margin-bottom: 0.25rem;
 	}
 
 	.edu-details p {
 		font-size: 0.875rem;
-		color: #71717a;
+		color: var(--text-dim);
 	}
 
 	@media (max-width: 640px) {
