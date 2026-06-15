@@ -80,7 +80,7 @@
 
 	.skill-row {
 		display: grid;
-		grid-template-columns: 10rem 1fr;
+		grid-template-columns: 14rem 1fr;
 		align-items: baseline;
 		gap: 1.5rem;
 		padding: 0.75rem 0;
@@ -97,7 +97,6 @@
 		color: var(--accent);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		white-space: nowrap;
 	}
 
 	.skill-tags {
