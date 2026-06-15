@@ -30,10 +30,10 @@
 <section id="skills">
 	<div class="container">
 		<h2>Skills</h2>
-		<div class="skills-grid">
+		<div class="skills-table">
 			{#each skillGroups as group (group.name)}
-				<div class="skill-group">
-					<h3>{group.name}</h3>
+				<div class="skill-row">
+					<span class="category">{group.name}</span>
 					<div class="skill-tags">
 						{#each group.skills as skill (skill)}
 							<span class="tag">{skill}</span>
@@ -72,33 +72,32 @@
 		border-radius: 2px;
 	}
 
-	.skills-grid {
+	.skills-table {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.skill-row {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: 2rem;
+		grid-template-columns: 10rem 1fr;
+		align-items: baseline;
+		gap: 1.5rem;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid var(--border);
 	}
 
-	.skill-group {
-		padding: 1.5rem;
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: 1rem;
-		transition: all 0.3s ease;
+	.skill-row:last-child {
+		border-bottom: none;
 	}
 
-	.skill-group:hover {
-		background: var(--card-hover-bg);
-		border-color: var(--card-hover-border);
-		transform: translateY(-2px);
-	}
-
-	h3 {
-		font-size: 0.875rem;
+	.category {
+		font-size: 0.8125rem;
 		font-weight: 600;
 		color: var(--accent);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		margin-bottom: 1rem;
+		white-space: nowrap;
 	}
 
 	.skill-tags {
@@ -122,5 +121,12 @@
 		background: var(--accent-bg);
 		border-color: var(--accent-border);
 		color: var(--accent);
+	}
+
+	@media (max-width: 640px) {
+		.skill-row {
+			grid-template-columns: 1fr;
+			gap: 0.5rem;
+		}
 	}
 </style>
