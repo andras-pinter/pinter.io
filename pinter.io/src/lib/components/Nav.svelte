@@ -3,7 +3,7 @@
 
 	let scrolled = $state(false);
 
-	const sections = ['about', 'skills', 'experience', 'projects', 'education'] as const;
+	const sections = ['about', 'projects', 'skills', 'experience', 'education'] as const;
 
 	function onScroll() {
 		scrolled = window.scrollY > 50;
