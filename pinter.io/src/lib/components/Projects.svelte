@@ -154,7 +154,7 @@
 		border-radius: 0.375rem;
 		font-size: 0.75rem;
 		color: var(--purple-text);
-		font-family: 'JetBrains Mono', monospace;
+		font-family: 'JetBrains Mono Variable', monospace;
 	}
 
 	@media (max-width: 640px) {
