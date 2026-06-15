@@ -41,11 +41,13 @@
 						<h3>{project.name}</h3>
 					</div>
 					<p class="description">{project.description}</p>
-					<p class="highlight">{project.highlight}</p>
-					<div class="tech-tags">
-						{#each project.tech as t (t)}
-							<span class="tech">{t}</span>
-						{/each}
+					<div class="card-footer">
+						<p class="highlight">{project.highlight}</p>
+						<div class="tech-tags">
+							{#each project.tech as t (t)}
+								<span class="tech">{t}</span>
+							{/each}
+						</div>
 					</div>
 				</div>
 			{/each}
@@ -124,6 +126,11 @@
 		margin-bottom: 1rem;
 	}
 
+	.card-footer {
+		margin-top: auto;
+		padding-top: 1.25rem;
+	}
+
 	.highlight {
 		font-size: 0.875rem;
 		color: var(--text-dim);
@@ -138,8 +145,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.375rem;
-		margin-top: auto;
-		padding-top: 1.25rem;
 	}
 
 	.tech {
