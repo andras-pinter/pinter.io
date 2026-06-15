@@ -1,3 +1,3 @@
 import { describe } from 'vitest';
 
-describe('/+page.svelte', () => { });
+describe('/+page.svelte', () => {});
