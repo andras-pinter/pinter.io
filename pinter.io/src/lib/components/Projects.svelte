@@ -87,6 +87,8 @@
 	}
 
 	.project-card {
+		display: flex;
+		flex-direction: column;
 		padding: 2rem;
 		background: var(--surface);
 		border: 1px solid var(--border);
@@ -136,6 +138,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.375rem;
+		margin-top: auto;
+		padding-top: 1.25rem;
 	}
 
 	.tech {
