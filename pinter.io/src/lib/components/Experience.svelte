@@ -131,7 +131,7 @@
 		font-size: 2rem;
 		font-weight: 700;
 		margin-bottom: 3rem;
-		color: #ffffff;
+		color: var(--text);
 		position: relative;
 		display: inline-block;
 	}
@@ -143,7 +143,7 @@
 		left: 0;
 		width: 3rem;
 		height: 3px;
-		background: #60a5fa;
+		background: var(--accent);
 		border-radius: 2px;
 	}
 
@@ -159,7 +159,7 @@
 		top: 0.5rem;
 		bottom: 0.5rem;
 		width: 2px;
-		background: linear-gradient(to bottom, #60a5fa, rgba(96, 165, 250, 0.1));
+		background: linear-gradient(to bottom, var(--accent), var(--accent-bg));
 	}
 
 	.timeline-item {
@@ -182,22 +182,22 @@
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		background: #0a0a0f;
-		border: 2px solid #60a5fa;
-		box-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+		background: var(--bg);
+		border: 2px solid var(--accent);
+		box-shadow: 0 0 8px var(--accent-bg);
 	}
 
 	.timeline-content {
 		padding: 1.5rem;
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.06);
+		background: var(--surface);
+		border: 1px solid var(--border);
 		border-radius: 1rem;
 		transition: all 0.3s ease;
 	}
 
 	.timeline-content:hover {
-		background: rgba(96, 165, 250, 0.03);
-		border-color: rgba(96, 165, 250, 0.15);
+		background: var(--card-hover-bg);
+		border-color: var(--card-hover-border);
 	}
 
 	.timeline-header {
@@ -211,25 +211,25 @@
 	h3 {
 		font-size: 1.125rem;
 		font-weight: 600;
-		color: #ffffff;
+		color: var(--text);
 	}
 
 	.company {
 		font-size: 0.875rem;
-		color: #60a5fa;
+		color: var(--accent);
 		font-weight: 500;
 	}
 
 	.period {
 		font-size: 0.75rem;
-		color: #71717a;
+		color: var(--text-dim);
 		font-family: 'JetBrains Mono', monospace;
 		white-space: nowrap;
 	}
 
 	.description {
 		font-size: 0.9375rem;
-		color: #a1a1aa;
+		color: var(--text-muted);
 		line-height: 1.7;
 	}
 
@@ -242,11 +242,11 @@
 
 	.obj-tag {
 		padding: 0.25rem 0.625rem;
-		background: rgba(96, 165, 250, 0.08);
-		border: 1px solid rgba(96, 165, 250, 0.15);
+		background: var(--accent-bg);
+		border: 1px solid var(--accent-border);
 		border-radius: 0.375rem;
 		font-size: 0.75rem;
-		color: #93c5fd;
+		color: var(--accent-light);
 		font-family: 'JetBrains Mono', monospace;
 	}
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ThemeToggle from './ThemeToggle.svelte';
+
 	let scrolled = $state(false);
 
 	const sections = ['about', 'skills', 'experience', 'projects', 'education'] as const;
@@ -13,11 +15,14 @@
 <nav class:scrolled>
 	<div class="nav-inner">
 		<a href="#hero" class="logo">AP</a>
-		<ul>
-			{#each sections as section (section)}
-				<li><a href="#{section}">{section}</a></li>
-			{/each}
-		</ul>
+		<div class="nav-right">
+			<ul>
+				{#each sections as section (section)}
+					<li><a href="#{section}">{section}</a></li>
+				{/each}
+			</ul>
+			<ThemeToggle />
+		</div>
 	</div>
 </nav>
 
@@ -33,9 +38,9 @@
 	}
 
 	nav.scrolled {
-		background: rgba(10, 10, 15, 0.85);
+		background: var(--nav-bg);
 		backdrop-filter: blur(12px);
-		border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+		border-bottom: 1px solid var(--accent-border);
 		padding: 0.75rem 2rem;
 	}
 
@@ -47,15 +52,21 @@
 		align-items: center;
 	}
 
+	.nav-right {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
 	.logo {
 		font-size: 1.5rem;
 		font-weight: 900;
-		color: #60a5fa;
+		color: var(--accent);
 		letter-spacing: -0.02em;
 	}
 
 	.logo:hover {
-		color: #93c5fd;
+		color: var(--accent-light);
 	}
 
 	ul {
@@ -65,7 +76,7 @@
 	}
 
 	ul a {
-		color: #a1a1aa;
+		color: var(--text-muted);
 		font-size: 0.875rem;
 		font-weight: 500;
 		text-transform: capitalize;
@@ -73,7 +84,7 @@
 	}
 
 	ul a:hover {
-		color: #60a5fa;
+		color: var(--accent);
 	}
 
 	@media (max-width: 640px) {

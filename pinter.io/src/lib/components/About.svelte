@@ -30,7 +30,7 @@
 		font-size: 2rem;
 		font-weight: 700;
 		margin-bottom: 2rem;
-		color: #ffffff;
+		color: var(--text);
 		position: relative;
 		display: inline-block;
 	}
@@ -42,7 +42,7 @@
 		left: 0;
 		width: 3rem;
 		height: 3px;
-		background: #60a5fa;
+		background: var(--accent);
 		border-radius: 2px;
 	}
 
@@ -54,28 +54,28 @@
 
 	p {
 		font-size: 1.0625rem;
-		color: #a1a1aa;
+		color: var(--text-muted);
 		line-height: 1.8;
 	}
 
 	p strong {
-		color: #e4e4e7;
+		color: var(--text);
 	}
 
 	blockquote {
 		margin-top: 1rem;
 		padding: 1.5rem 2rem;
-		background: rgba(96, 165, 250, 0.05);
-		border-left: 3px solid #60a5fa;
+		background: var(--accent-bg);
+		border-left: 3px solid var(--accent);
 		border-radius: 0 0.5rem 0.5rem 0;
 		font-style: italic;
 		font-size: 1.25rem;
-		color: #e4e4e7;
+		color: var(--text);
 		font-weight: 500;
 	}
 
 	.quote-mark {
-		color: #60a5fa;
+		color: var(--accent);
 		font-size: 1.5rem;
 	}
 </style>
