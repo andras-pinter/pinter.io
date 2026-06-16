@@ -1,10 +1,13 @@
+import type { Action } from 'svelte/action';
+
 interface RevealOptions {
 	threshold?: number;
 	delay?: number;
 }
 
-export function reveal(node: HTMLElement, options: RevealOptions = {}) {
+export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, options = {}) => {
 	const { threshold = 0.1, delay = 0 } = options;
+	const previousDelay = node.style.transitionDelay;
 
 	node.classList.add('reveal');
 
@@ -19,12 +22,12 @@ export function reveal(node: HTMLElement, options: RevealOptions = {}) {
 
 	const observer = new IntersectionObserver(
 		(entries) => {
-			entries.forEach((entry) => {
+			for (const entry of entries) {
 				if (entry.isIntersecting) {
 					node.classList.add('revealed');
 					observer.disconnect();
 				}
-			});
+			}
 		},
 		{ threshold }
 	);
@@ -34,6 +37,7 @@ export function reveal(node: HTMLElement, options: RevealOptions = {}) {
 	return {
 		destroy() {
 			observer.disconnect();
+			node.style.transitionDelay = previousDelay;
 		}
 	};
-}
+};

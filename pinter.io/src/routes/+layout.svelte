@@ -3,6 +3,7 @@
 	import '@fontsource-variable/jetbrains-mono';
 	import favicon from '$lib/assets/favicon.ico';
 	import Nav from '$lib/components/Nav.svelte';
+	import type { Snippet } from 'svelte';
 
 	const personSchema = {
 		'@context': 'https://schema.org',
@@ -18,13 +19,18 @@
 		knowsAbout: ['Rust', 'C#', 'Distributed Systems', 'Cloud Architecture', 'PAM', 'Cybersecurity']
 	};
 
-	let { children } = $props();
+	const personSchemaJson = JSON.stringify(personSchema)
+		.replace(/</g, '\\u003c')
+		.replace(/\u2028/g, '\\u2028')
+		.replace(/\u2029/g, '\\u2029');
+
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON-LD requires @html injection -->
-	{@html `<script type="application/ld+json">${JSON.stringify(personSchema)}${'<'}/script>`}
+	{@html `<script type="application/ld+json">${personSchemaJson}${'<'}/script>`}
 </svelte:head>
 
 <Nav />

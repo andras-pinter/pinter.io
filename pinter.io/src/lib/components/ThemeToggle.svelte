@@ -27,13 +27,22 @@
 		open = false;
 	}
 
+	function isTheme(value: string | null): value is Theme {
+		return value === 'dark' || value === 'light' || value === 'system';
+	}
+
 	$effect(() => {
-		const saved = localStorage.getItem('theme') as Theme | null;
-		if (saved && ['dark', 'light', 'system'].includes(saved)) {
+		const saved = localStorage.getItem('theme');
+		if (isTheme(saved)) {
 			theme = saved;
 		}
-		applyTheme(theme);
+	});
 
+	$effect(() => {
+		applyTheme(theme);
+	});
+
+	$effect(() => {
 		const mq = window.matchMedia('(prefers-color-scheme: dark)');
 		const handler = () => {
 			if (theme === 'system') applyTheme('system');
