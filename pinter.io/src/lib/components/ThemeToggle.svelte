@@ -23,7 +23,6 @@
 	function selectTheme(t: Theme) {
 		theme = t;
 		localStorage.setItem('theme', t);
-		applyTheme(t);
 		open = false;
 	}
 
