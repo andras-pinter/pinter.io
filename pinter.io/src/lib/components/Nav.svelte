@@ -5,10 +5,10 @@
 
 	let scrolled = $state(false);
 	let menuOpen = $state(false);
-	let activeSection = $state<(typeof sections)[number] | ''>('');
-
 	const sections = ['about', 'projects', 'skills', 'experience', 'education'] as const;
 	const reversedSections = [...sections].reverse();
+
+	let activeSection = $state<(typeof sections)[number] | null>(null);
 
 	function onScroll() {
 		scrolled = window.scrollY > 50;
@@ -21,7 +21,7 @@
 			}
 		}
 
-		activeSection = '';
+		activeSection = null;
 	}
 
 	function toggleMenu() {
