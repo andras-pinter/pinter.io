@@ -15,7 +15,17 @@
 			from: 'February 2025',
 			to: 'present',
 			description:
-				'Part of the company-wide Architecture Team, designing the next-generation Cloud platform for PAM, IGA, and Governance. Leading architectural decisions across 5–6 teams (20+ engineers), guiding requirements, designs, and implementation.'
+				'Part of the company-wide Architecture Team, designing the next-generation Cloud platform. Primary focus on PAM architecture; contributing to Identity (IGA) and Governance designs. Designing the company-wide Observability platform and OpenTelemetry adoption strategy across all products (metrics, logs, traces). Leading architectural decisions across 6–8 teams, driving the RFC/ADR process, reviewing designs, and mentoring tech leads.',
+			objectives: [
+				'Cloud-native, multi-tenant SaaS architecture',
+				'PAM platform design; IGA & Governance contributions',
+				'Observability platform & OpenTelemetry (metrics, logs, traces)',
+				'Event-driven & micro-service design (gRPC, REST, messaging)',
+				'Azure Cloud, Kubernetes, Helm, Bicep',
+				'Rust and C# service platforms',
+				'Zero-trust security, identity & access design',
+				'Cross-team technical leadership and design governance'
+			]
 		},
 		{
 			title: 'Principal Software Engineer',

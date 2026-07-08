@@ -6,7 +6,7 @@
 		},
 		{
 			name: 'Cloud & DevOps',
-			skills: ['Helm', 'Bicep', 'Docker', 'Kubernetes', 'Azure Cloud']
+			skills: ['Helm', 'Bicep', 'Docker', 'Kubernetes', 'Azure Cloud', 'OpenTelemetry']
 		},
 		{
 			name: 'Networking & Protocols',
